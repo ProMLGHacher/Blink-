@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/splash">
+
+    <fragment
+        android:id="@+id/auth"
+        android:name="com.example.nav.fragments.Auth"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" >
+        <action
+            android:id="@+id/action_auth_to_registration"
+            app:destination="@id/registration" />
+        <action
+            android:id="@+id/action_auth_to_sexFragment"
+            app:destination="@id/sexFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.nav.fragments.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_messages"
+            app:destination="@id/messages" />
+    </fragment>
+    <fragment
+        android:id="@+id/messages"
+        android:name="com.example.nav.fragments.Messages"
+        android:label="fragment_messages"
+        tools:layout="@layout/fragment_messages" />
+    <fragment
+        android:id="@+id/registration"
+        android:name="com.example.nav.fragments.Registration"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registration_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_registration_to_auth"
+            app:destination="@id/auth" />
+    </fragment>
+    <fragment
+        android:id="@+id/splash"
+        android:name="com.example.nav.fragments.Splash"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splash_to_auth"
+            app:destination="@id/auth" />
+        <action
+            android:id="@+id/action_splash_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/sexFragment"
+        android:name="com.example.nav.fragments.SexFragment"
+        android:label="fragment_sex"
+        tools:layout="@layout/fragment_sex" >
+        <action
+            android:id="@+id/action_sexFragment_to_workRoomFragment"
+            app:destination="@id/workRoomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workRoomFragment"
+        android:name="com.example.nav.fragments.WorkRoomFragment"
+        android:label="fragment_work_room"
+        tools:layout="@layout/fragment_work_room" >
+        <action
+            android:id="@+id/action_workRoomFragment_to_otherInfoFragment"
+            app:destination="@id/otherInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otherInfoFragment"
+        android:name="com.example.nav.fragments.OtherInfoFragment"
+        android:label="fragment_other_info"
+        tools:layout="@layout/fragment_other_info" >
+        <action
+            android:id="@+id/action_otherInfoFragment_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+</navigation>
